@@ -5,6 +5,7 @@ homework = float(input("Please enter your homework grade (/25): "))
 def calculate(homework, assessment, finalgrade):
     homework = (homework / 25) * 100
     assessment = (assessment / 50) * 100
+    finalgrade = (finalgrade / 100) *100
     total = (homework + assessment + finalgrade) / 3
     return total
 
