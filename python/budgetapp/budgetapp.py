@@ -11,9 +11,9 @@ class Account:
         if self.funds < amount:
             print("Not enough money")
         else:
-            self.funds -= amount
-            print("You have successfuly moved {amount} to {self.category} ")
-            print("New amount is {self.funds}")
+            self.funds += amount
+            print(f"You have successfuly moved {amount} to {self.category}" )
+            print(f"New amount is {self.funds}")
 
     def transfer(self, amount, othercategory):
         if self.funds < amount:
@@ -21,9 +21,9 @@ class Account:
         else:
             self.funds -= amount
             othercategory.funds += amount
-            print(" Congratulations, {amount} was moved from {self.category} to {othercategory.category}")
-            print("The new {self.category} fund is {self.fund}")
-            print("The {other_category} fund is {othercategory.fund}")
+            print(f"Congratulations, {amount} was moved from {self.category} to {othercategory.category}")
+            print(f"The new {self.category} fund is {self.funds}")
+            print(f"The {othercategory} fund is {othercategory.funds}")
 
 
     def withdrawmoney(self, amount):
@@ -31,7 +31,7 @@ class Account:
                 print("Not enough money")
         else:
                 self.funds -= amount
-                print("You have successfuly moved {amount} to {self.category} ")
-                print("New amount is {self.funds}")
+                print(f"You have successfuly moved {amount} to {self.category} ")
+                print(f"New amount is {self.funds}")
 
 
