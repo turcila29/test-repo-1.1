@@ -33,4 +33,6 @@ from [file name] import [function name]
 
 
 
-
+def nameofthefunction(parameter1):
+    parameter1 = parameter2 + 'sometext'
+    return "this is data out of a function with: ' + parameter2
