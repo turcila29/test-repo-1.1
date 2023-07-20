@@ -14,5 +14,4 @@ if __name__ == "__main__":
     food.withdrawmoney(10000)
     clothing.addmoney(20)
     entertainment.addmoney(3000)
-
     food.transfer(50, clothing)

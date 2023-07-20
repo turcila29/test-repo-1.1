@@ -2,7 +2,7 @@ class Account:
 
 
 
-    def __init__(self, category, funds=0):
+    def __init__(self, category, funds):
         self.category = category
         self.funds = funds
 
