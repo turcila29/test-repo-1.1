@@ -2,17 +2,17 @@ from budgetapp import Account
 
 
 if __name__ == "__main__":
-    food = Account("Food", 50)
-    clothing = Account("Clothing", 100)
-    entertainment = Account("Entertainment", 150)
+    food = Account("Food", 200)
+    clothing = Account("Clothing", 300)
+    entertainment = Account("Entertainment", 400)
 
     print(f"{food.category} fund is {food.funds}")
     print(f"{clothing.category} fund is {clothing.funds}")
     print(f"{clothing.category} fund is {clothing.funds}")
     print()
 
-    food.withdrawmoney(5000)
-    clothing.addmoney(50)
-    entertainment.addmoney(100)
+    food.withdrawmoney(10000)
+    clothing.addmoney(20)
+    entertainment.addmoney(3000)
 
-    food.transfer(5, clothing)
+    food.transfer(50, clothing)
