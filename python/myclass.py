@@ -1,18 +1,18 @@
 class Dog:
 
-    #colour = "brown"
-    #breed = "Labrador"
-    #personality = "lively"
-    #bark = "yipipypipy"
+#    colour = ""
+#    breed = ""
+#    personality = ""
+#    barkstr = ""
 
-    def __innit__(self, inputcolour,inputbreed,inputpersonality,inputbark):
+    def __init__(self, inputcolour,inputbreed,inputpersonality,inputbarkstr):
         self.colour = inputcolour
         self.breed = inputbreed
         self.personality = inputpersonality
-        self.bark = inputbark
+        self.barkstr = inputbarkstr
 
     def bark(self):
-        return self.bark
+        return self.barkstr
 
     def runabout():
         pass
@@ -20,14 +20,12 @@ class Dog:
     def playgames():
         pass
 
+fluffy = Dog("Yellow and Brown","Lab","Relaxed","Woof")
 
+bob = Dog("Gold","Sausagedog","depressed","yipyipyip"
+)
+Spot = Dog("Green","Animedog","bubbly","Whazzup")
 
-        fluffy = Dog("yellow and brown", "Lab", "relaxed", "woof" )
-        bob = Dog()
-        spot = Dog()
+print(Spot.bark(),bob.bark(),fluffy.bark())
 
-
-
-    #spot.colour = "yellow and brown"
-    #bob.colour = "gold"
-    #fluffy.colour = "green"
+breakpoint()
