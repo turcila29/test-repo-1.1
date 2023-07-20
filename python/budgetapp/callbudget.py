@@ -1,7 +1,7 @@
 from budgetapp import Account
 
 
-if __name__ == "__main__":
+if __name__ == "main":
     food = Account("Food", 200)
     clothing = Account("Clothing", 300)
     entertainment = Account("Entertainment", 400)
