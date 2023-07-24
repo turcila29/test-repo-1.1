@@ -16,4 +16,3 @@ submit = tkinter.Button(root, test = "strip vowels", command=strip_vowels)
 
 if __name__ == '__main__':
     root.mainloop()
-    
