@@ -15,7 +15,7 @@ test3 = float(input("Please enter your first assessment grade (/100): "))
 test2 = float(input("Please enter your second assessment grade (/100: "))
 test1 = float(input("Please enter your third assessment grade (/100): "))
 
-def calculate(test1, test2, test3):
+def calculate(test1, test2, test3: int) -> int:
     test1 = (test1 / 100) * 100
     test2 = (test2 / 100) * 100
     test3 = (test3 / 100) *100
