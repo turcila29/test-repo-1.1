@@ -13,8 +13,5 @@
 	# How do we ignore case in a String? help(str) may offer some insight.
 
 
-def vowels(word):
 
-    number_of_vowels = 0
-    the_vowels = ["a", "e", "i", "o", "u"]
     
