@@ -1,13 +1,4 @@
-Public IPv4 DNS:
-ec2-13-40-64-250.eu-west-2.compute.amazonaws.com:8080
 
-initial admin password: 5e459e30477243fcb42938aab0acd0bb
-
-
-user:turcalete
-pass:laguna78
-
-email:noname@gmail.com
 
 
 jenkings jobs:  
@@ -25,3 +16,7 @@ jenkings jobs:
 jobs type:
 -freestyle - simple, flexible
 -pipeline - much better for complex, multi-staged jobs with unstable config
+
+
+
+ssh-keyscan github.com > .ssh/known_hosts

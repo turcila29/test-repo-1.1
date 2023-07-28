@@ -15,6 +15,7 @@ genres and override the __init__ method and __str__ methods appropriately
 '''
 from typing import List
 class Book():
+    books = []
     def __init__(self, title, pages, isbn, genre, author = "Unknown"):
         self.title = title
         self.pages = pages
@@ -47,6 +48,9 @@ class Book():
 
     def __str__(self):
         return f"Written by {self.author}, {self.title} is a gripping {self.pages}-page"
+    
+    def __repr__(self):
+        return f"Book('{self.title}', {self.pages}, '{self.isbn}', '{self.genre}', fromrepr=True, author='{self.author}')"
 
 class BookList:
     def __init__(self, *args):

@@ -14,12 +14,20 @@ from exercise2 import Book
 from exercise2 import BookList
 app = Flask(__name__)
 
+def book_structure(book):
+    return {
+        "title": book.title,
+        "pages": book.pages,
+        "genre": book.genre,
+        "by": book.author,
+        "isbn": book.isbn
+    }
+
 books = BookList(
     Book("John Johnson", "Book Title", "200", "1235433865"),
     Book("Dorothy", "The wonderful world of os", "67", "904757363")
 )
 
-books.update_ids()
 
 def get_args():
     return {key: value for key, value in request.args.items() if key in ("title", "author", "pages", "isbn")}
@@ -28,21 +36,26 @@ def get_args():
 
 
 def index():
-    return [book.json for book in books.filter(**get_args())]
+    return'''
+    Welcome to the ultimate library experience<br>
+    Guide:<br>
+    /search --> search for books by author<br>
+    /create --> add new book
+
+'''
 
 @app.route('/create')
 def create():
-    try:
-        book = books.create(**get_args())
-        return book.json
-
-    except TypeError as err:
-        return str(err)
+    if request.args.get("isbn") in map(lambda b: b.isbn, Book.books):
+        return f"{request.args.get('isbn')} is already in use", 403
+    book = Book(**request.args, fromrepr=True)
+    return f"added new book: {str(book)}"
 
 
-@app.route('/<int:book_id>')
-def get(book_id):
-    return books.get(book_id).json
+@app.route('/search')
+def search():
+    author = request.args.get("author")
+    return list(map(book_structure, Book.search(author)))
 
 if __name__ == "__main__":
     app.run()
