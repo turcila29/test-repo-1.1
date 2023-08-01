@@ -1,0 +1,33 @@
+body {
+    background-color: aquamarine;
+    font-weight: bold;
+    font-style: italic;
+    font-family: Helvetica;
+    font-size: 1em;
+}
+
+h1{
+    color: blueviolet;
+    margin: 20px;
+    text-decoration: underline;
+    word-spacing: 1cm;
+    text-transform: uppercase;
+}
+
+
+div{
+    border: 1px solid black;
+    text-align: center;
+    width: 50%;
+    border-radius: 5px;
+    padding: 5px;
+
+
+}
+
+#button1{
+    text-align: center;
+    border: 1px solid black;
+    color: brown;
+}
+
