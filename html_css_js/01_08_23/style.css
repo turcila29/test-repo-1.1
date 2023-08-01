@@ -6,7 +6,7 @@ body {
     font-size: 1em;
 }
 
-h1{
+h1 { 
     color: blueviolet;
     margin: 20px;
     text-decoration: underline;
@@ -15,7 +15,7 @@ h1{
 }
 
 
-div{
+#div1 {
     border: 1px solid black;
     text-align: center;
     width: 50%;
@@ -25,9 +25,26 @@ div{
 
 }
 
-#button1{
+#button1 {
     text-align: center;
     border: 1px solid black;
     color: brown;
 }
+
+
+div {
+    border: solid red; 
+    width: 140px; 
+    height: 60px;
+    margin-top: 25%;
+    margin-left: 25%;
+    /* transform: rotate(25deg) ; */
+    /* transform: rotate(20deg) rotateZ(90deg); */
+    /* transform: rotate(0deg) translate(200px,100px); */
+    /* transform: rotate(20deg) translate(200px,100px) scale(2,3); */
+    /* transform: rotate(20deg) translate(200px,100px) scale(2,3) skew(180deg,180deg); */
+    /* transform-origin: left; */
+}
+
+
 
