@@ -1,0 +1,24 @@
+p::first-line {
+    color: blue;
+}
+
+p::first-letter{
+    color: red;
+    font-size: xx-large;
+}
+
+p::before{
+    content: "Back when I was a kid --";
+}
+
+p::after{
+    content: "--Thats what she said";
+}
+
+p.highlight:hover {
+    background-color: lightblue;
+}
+
+input:focus {
+    background-color: lightblue;
+}

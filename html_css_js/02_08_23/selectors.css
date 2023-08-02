@@ -1,0 +1,20 @@
+#heading > em {
+    color: blue;
+}
+
+article p {
+    color:red
+}
+
+header > h1 {
+    color: green;
+}
+
+h1 + p {
+    color: purple;
+}
+
+h1 ~ p {
+    background-color: gray;
+}
+
