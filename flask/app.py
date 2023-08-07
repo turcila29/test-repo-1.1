@@ -1,6 +1,19 @@
 from flask import Flask, request, redirect, url_for
+import os
+from flask_sqlalchemy import SQLAlchemy
+
 
 app = Flask(__name__)
+
+app.config['SQLALCHEMY_DATABASE_URI'] = os.getenv("DATABASE_URI")
+
+db = SQLAlchemy(app)
+
+class Person(db.Model):
+    id = db.Column(db.Integer, primary_key=True)
+    first_name = db.Column(db.String(30), default="Mise")
+    last_name = db.Column(db.String(30), unique=True)
+
 
 @app.route('/')
 def home():
