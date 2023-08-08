@@ -1,4 +1,4 @@
-from db_relationship_exercise import db, app 
+from application import db, app
 
 with app.app_context():
 
