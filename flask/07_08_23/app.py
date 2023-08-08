@@ -15,9 +15,13 @@ class Person(db.Model):
     last_name = db.Column(db.String(30), unique=True)
 
 
-@app.route('/')
-def home():
-    return "this is fun"
+class Users(db.Model):
+    id = db.Column(db.Integer, primary_key=True)
+    fullName = db.Column(db.String(60), nullable=False)
+    email = db.Column(db.String(50), nullable=False, unique=True)
+
+
+
 
 @app.route('/postoption', methods=["GET", "POST"])
 def posto():
