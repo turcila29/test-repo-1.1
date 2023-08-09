@@ -1,6 +1,6 @@
 from flask import Flask, render_template, request
 from flask_wtf import FlaskForm
-from wtforms import StringField, SubmitField
+from wtforms import StringField, SubmitField, DateField, IntegerField, SelectField
 
 
 
@@ -11,6 +11,13 @@ app.config['SECRET_KEY'] = 'cats'
 class BasicForm(FlaskForm):
     first_name = StringField('First Name')
     last_name = StringField('Last Name')
+    birthday = DateField('DateOfBirth')
+    fav_num = IntegerField('Favourite number')
+    fav_food = SelectField('Favourite food', choices=[
+        ('pizza', 'Pizza'),
+        ('burger', 'Burger'),
+        ('ciorba', 'Ciorba')
+    ])
     submit = SubmitField('Add Name')
 
     @app.route('/', methods=['GET', 'POST'])
