@@ -35,3 +35,11 @@ def postName():
      form = myForm()
      if form.validate_on_submit():
           username = form.username.data
+          return render_template('home.html', form = form, userame = username)
+     else:
+          return render_template('home.html', form = form, username = "")
+     
+
+    
+if __name__ == '__main__':
+    app.run(debug=True, host='0.0.0.0', port='5001')
